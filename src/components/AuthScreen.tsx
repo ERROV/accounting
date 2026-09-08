@@ -14,8 +14,8 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({
   language,
   onToggleLanguage,
 }) => {
-  const [username, setUsername] = useState('mothana');
-  const [password, setPassword] = useState('admin123admin123');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -108,7 +108,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({
                   required
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  placeholder="mothana"
+                  placeholder={language === 'ar' ? 'أدخل اسم المستخدم' : 'Enter username'}
                   autoComplete="username"
                   className="w-full rtl:pr-9 rtl:pl-3 ltr:pl-9 ltr:pr-3 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                 />
@@ -131,7 +131,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="admin123admin123"
+                  placeholder={language === 'ar' ? 'أدخل كلمة المرور' : 'Enter password'}
                   autoComplete="current-password"
                   className="w-full rtl:pr-9 rtl:pl-3 ltr:pl-9 ltr:pr-3 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-950 border border-slate-800 text-white placeholder-slate-600 focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
                 />
@@ -156,16 +156,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({
             </button>
           </form>
 
-          {/* Simple Credentials Note */}
-          <div className="mt-5 pt-4 border-t border-slate-800/80 text-center">
-            <div className="inline-block px-2.5 py-1 rounded-lg bg-slate-950 border border-slate-800 text-[11px] text-slate-400 font-mono">
-              <span className="text-slate-500">user:</span>{' '}
-              <span className="text-emerald-400 font-semibold">mothana</span>
-              <span className="mx-1.5 text-slate-700">•</span>
-              <span className="text-slate-500">pass:</span>{' '}
-              <span className="text-emerald-400 font-semibold">admin123admin123</span>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
