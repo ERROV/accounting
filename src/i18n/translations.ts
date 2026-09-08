@@ -1,0 +1,216 @@
+import { Language } from '../types';
+
+export const translations = {
+  ar: {
+    appTitle: 'نظام إدارة الحسابات والديون والمصروفات',
+    appSubtitle: 'إدارة مالية دقيقة مع مزامنة سحابية وقاعدة بيانات PostgreSQL',
+    dashboard: 'لوحة التحكم',
+    accountsAndDebts: 'الأشخاص والديون',
+    expenses: 'المصروفات',
+    income: 'الدخل',
+    reminders: 'تنبيهات المدفوعات',
+    backups: 'النسخ الاحتياطي',
+    cloudSynced: 'مزامنة سحابية متصلة',
+    cloudOffline: 'غير متصل بالسحابة',
+    refreshSync: 'تحديث المزامنة',
+    
+    // KPI Cards
+    totalIncome: 'إجمالي الدخل',
+    totalExpenses: 'إجمالي المصروفات',
+    totalDebts: 'إجمالي الديون المسجلة',
+    totalRemaining: 'إجمالي المتبقي (المستحقات)',
+    netBalance: 'صافي الرصيد المتاح',
+    
+    // People / Accounts
+    addPerson: 'إضافة شخص جديد',
+    editPerson: 'تعديل بيانات الشخص',
+    deletePerson: 'حذف الحساب',
+    personName: 'اسم الشخص',
+    phoneNumber: 'رقم الهاتف',
+    notes: 'ملاحظات إضافية',
+    searchPersonPlaceholder: 'ابحث بالاسم أو رقم الهاتف...',
+    noPeopleFound: 'لم يتم العثور على أي شخص',
+    personCreated: 'تم إنشاء حساب الشخص بنجاح',
+    viewStatement: 'كشف الحساب والعمليات',
+    recordDebt: 'تسجيل دين / مبلغ عليه',
+    recordPayment: 'تسجيل دفعة / سداد',
+    remainingAmount: 'المتبقي',
+    paidAmount: 'المدفوع',
+    totalDebtAmount: 'إجمالي الدين',
+    statusSettled: 'تم السداد بالكامل',
+    statusHasDebt: 'عليه متبقي',
+    statusOverdue: 'متأخر في السداد',
+    
+    // Operations / Transactions
+    addDebtTitle: 'تسجيل مبلغ أو دين على الشخص',
+    addPaymentTitle: 'تسجيل دفعة مستلمة من الشخص',
+    editOperation: 'تعديل العملية',
+    deleteOperation: 'حذف العملية',
+    amount: 'المبلغ',
+    date: 'التاريخ',
+    dueDate: 'تاريخ الاستحقاق (اختياري)',
+    reasonOrDescription: 'السبب / التفاصيل',
+    operationType: 'نوع العملية',
+    debtType: 'دين (عليه مبلغ)',
+    paymentType: 'دفعة (سداد)',
+    
+    // Expenses
+    addExpense: 'إضافة مصروف جديد',
+    expenseRecipient: 'اسم الشخص / المستلم',
+    expenseReason: 'السبب / بيان الصرف',
+    expenseCategory: 'التصنيف',
+    noExpensesFound: 'لا توجد مصروفات مسجلة',
+    
+    // Income
+    addIncome: 'إضافة مبلغ وارد / دخل',
+    incomeSource: 'المصدر / اسم الشخص',
+    incomeReason: 'السبب / بيان الدخل',
+    incomeCategory: 'التصنيف',
+    noIncomeFound: 'لا توجد مبالغ دخل مسجلة',
+    
+    // Overdue Reminders
+    overdueAlerts: 'تنبيهات المدفوعات المتأخرة',
+    overdueNotice: 'توجد مبالغ مستحقة تجاوزت تاريخ استحقاقها وتحتاج متابعة',
+    daysOverdue: 'أيام التأخير',
+    sendReminderMsg: 'إرسال تذكير واتساب',
+    noOverdue: 'رائع! لا توجد أي مدفوعات متأخرة حالياً',
+    
+    // Export & Backup
+    exportPDF: 'تصدير PDF',
+    exportExcel: 'تصدير Excel',
+    exportAllStatement: 'تصدير تقرير شامل',
+    backupDatabase: 'النسخ الاحتياطي السحابي',
+    createBackupNow: 'إنشاء نسخة احتياطية الآن',
+    autoBackupEnabled: 'النسخ التلقائي مفعل دورياً',
+    downloadJsonBackup: 'تحميل نسخة JSON محلية',
+    restoreBackup: 'استعادة نسخة احتياطية',
+    restoreWarning: 'تنبيه: استعادة النسخة الاحتياطية ستستبدل البيانات الحالية بالكامل.',
+    confirmDelete: 'هل أنت متأكد من الحذف؟ لا يمكن التراجع عن هذا الإجراء.',
+    
+    // Actions & Common
+    save: 'حفظ',
+    cancel: 'إلغاء',
+    delete: 'حذف',
+    edit: 'تعديل',
+    close: 'إغلاق',
+    filter: 'تصفية',
+    all: 'الكل',
+    currency: 'ريال',
+    search: 'بحث',
+    loading: 'جاري التحميل...',
+    success: 'تمت العملية بنجاح',
+    error: 'حدث خطأ ما',
+    actions: 'الإجراءات',
+    status: 'الحالة',
+    total: 'المجموع',
+    quickActions: 'إجراءات سريعة',
+  },
+  en: {
+    appTitle: 'Accounts, Debts & Expenses Manager',
+    appSubtitle: 'Accurate financial tracking with Cloud Sync & PostgreSQL database',
+    dashboard: 'Dashboard',
+    accountsAndDebts: 'People & Debts',
+    expenses: 'Expenses',
+    income: 'Income',
+    reminders: 'Payment Alerts',
+    backups: 'Backups',
+    cloudSynced: 'Cloud Sync Active',
+    cloudOffline: 'Offline / Disconnected',
+    refreshSync: 'Refresh Sync',
+    
+    // KPI Cards
+    totalIncome: 'Total Income',
+    totalExpenses: 'Total Expenses',
+    totalDebts: 'Total Debts',
+    totalRemaining: 'Total Outstanding Balance',
+    netBalance: 'Net Cash Balance',
+    
+    // People / Accounts
+    addPerson: 'Add Person',
+    editPerson: 'Edit Person',
+    deletePerson: 'Delete Account',
+    personName: 'Person Name',
+    phoneNumber: 'Phone Number',
+    notes: 'Additional Notes',
+    searchPersonPlaceholder: 'Search by name or phone...',
+    noPeopleFound: 'No accounts found',
+    personCreated: 'Person account created successfully',
+    viewStatement: 'Account Statement',
+    recordDebt: 'Record Debt / Due',
+    recordPayment: 'Record Payment',
+    remainingAmount: 'Remaining',
+    paidAmount: 'Paid',
+    totalDebtAmount: 'Total Debt',
+    statusSettled: 'Fully Settled',
+    statusHasDebt: 'Has Balance',
+    statusOverdue: 'Overdue',
+    
+    // Operations / Transactions
+    addDebtTitle: 'Record Debt against Person',
+    addPaymentTitle: 'Record Payment from Person',
+    editOperation: 'Edit Operation',
+    deleteOperation: 'Delete Operation',
+    amount: 'Amount',
+    date: 'Date',
+    dueDate: 'Due Date (Optional)',
+    reasonOrDescription: 'Reason / Description',
+    operationType: 'Operation Type',
+    debtType: 'Debt (Amount Owed)',
+    paymentType: 'Payment (Received)',
+    
+    // Expenses
+    addExpense: 'Add Expense',
+    expenseRecipient: 'Person / Recipient Name',
+    expenseReason: 'Reason / Item Details',
+    expenseCategory: 'Category',
+    noExpensesFound: 'No expenses recorded',
+    
+    // Income
+    addIncome: 'Add Income',
+    incomeSource: 'Source / Person Name',
+    incomeReason: 'Reason / Income Details',
+    incomeCategory: 'Category',
+    noIncomeFound: 'No income records found',
+    
+    // Overdue Reminders
+    overdueAlerts: 'Overdue Payment Alerts',
+    overdueNotice: 'Outstanding amounts past due date requiring follow-up',
+    daysOverdue: 'Days Overdue',
+    sendReminderMsg: 'Send WhatsApp Reminder',
+    noOverdue: 'Great! No overdue payments at this moment',
+    
+    // Export & Backup
+    exportPDF: 'Export PDF',
+    exportExcel: 'Export Excel',
+    exportAllStatement: 'Export Full Statement',
+    backupDatabase: 'Cloud Database Backup',
+    createBackupNow: 'Create Backup Now',
+    autoBackupEnabled: 'Periodic Auto-Backup Active',
+    downloadJsonBackup: 'Download JSON Backup',
+    restoreBackup: 'Restore Backup',
+    restoreWarning: 'Warning: Restoring will overwrite existing data.',
+    confirmDelete: 'Are you sure you want to delete? This action cannot be undone.',
+    
+    // Actions & Common
+    save: 'Save',
+    cancel: 'Cancel',
+    delete: 'Delete',
+    edit: 'Edit',
+    close: 'Close',
+    filter: 'Filter',
+    all: 'All',
+    currency: 'USD',
+    search: 'Search',
+    loading: 'Loading...',
+    success: 'Operation completed successfully',
+    error: 'An error occurred',
+    actions: 'Actions',
+    status: 'Status',
+    total: 'Total',
+    quickActions: 'Quick Actions',
+  },
+};
+
+export function getTranslation(lang: Language) {
+  return translations[lang] || translations.ar;
+}
