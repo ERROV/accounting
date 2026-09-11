@@ -133,7 +133,7 @@ export const ExpensesManager: React.FC<ExpensesManagerProps> = ({
       </table>
     `;
 
-    exportPrintablePDF('تقرير المصروفات المالية - نظام DF', htmlContent);
+    exportPrintablePDF('تقرير المصروفات المالية - نظام OsiFarma', htmlContent);
   };
 
   return (

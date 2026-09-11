@@ -128,7 +128,7 @@ export const IncomeManager: React.FC<IncomeManagerProps> = ({
       </table>
     `;
 
-    exportPrintablePDF('تقرير الدخل والمقبوضات المالية - نظام DF', htmlContent);
+    exportPrintablePDF('تقرير الدخل والمقبوضات المالية - نظام OsiFarma', htmlContent);
   };
 
   return (

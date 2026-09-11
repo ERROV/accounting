@@ -125,6 +125,7 @@ export function exportPrintablePDF(title: string, htmlContent: string) {
     <head>
       <meta charset="UTF-8" />
       <title>${title}</title>
+      <link rel="icon" type="image/png" href="/logo.png" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -132,6 +133,8 @@ export function exportPrintablePDF(title: string, htmlContent: string) {
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif; }
         body { padding: 30px; color: #1e293b; background: #ffffff; }
         .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #0f172a; padding-bottom: 16px; margin-bottom: 24px; }
+        .logo-box { display: flex; align-items: center; gap: 14px; }
+        .logo-img { height: 42px; width: auto; object-fit: contain; }
         .title { font-size: 22px; font-weight: 800; color: #0f172a; }
         .subtitle { font-size: 13px; color: #64748b; margin-top: 4px; }
         .date { font-size: 13px; color: #475569; font-weight: 600; }
@@ -155,9 +158,12 @@ export function exportPrintablePDF(title: string, htmlContent: string) {
     </head>
     <body>
       <div class="header">
-        <div>
-          <div class="title">${title}</div>
-          <div class="subtitle">تقرير مالي موثق من نظام إدارة الحسابات والديون</div>
+        <div class="logo-box">
+          <img src="/logo.png" alt="OsiFarma" class="logo-img" />
+          <div>
+            <div class="title">${title}</div>
+            <div class="subtitle">تقرير مالي موثق من نظام OsiFarma لإدارة الحسابات</div>
+          </div>
         </div>
         <div class="date">تاريخ التقرير: ${currentDate}</div>
       </div>
@@ -165,7 +171,7 @@ export function exportPrintablePDF(title: string, htmlContent: string) {
       ${htmlContent}
 
       <div class="footer">
-        تم استخراج هذا التقرير تلقائياً من نظام الحسابات والمصروفات &copy; ${new Date().getFullYear()}
+        تم استخراج هذا التقرير تلقائياً من نظام OsiFarma المالي &copy; ${new Date().getFullYear()}
       </div>
 
       <script>

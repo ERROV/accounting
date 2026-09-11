@@ -167,7 +167,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
       </table>
     `;
 
-    exportPrintablePDF('التقرير المالي العام - نظام DF', htmlContent);
+    exportPrintablePDF('التقرير المالي العام - نظام OsiFarma', htmlContent);
   };
 
   // Recent activity combination

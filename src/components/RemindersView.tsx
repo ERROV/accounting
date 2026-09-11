@@ -82,7 +82,7 @@ export const RemindersView: React.FC<RemindersViewProps> = ({
     const conf = CURRENCIES[tr.currency || 'IQD'];
     const cleanPhone = person.phone.replace(/[^0-9]/g, '');
     const message = encodeURIComponent(
-      `السلام عليكم ورحمة الله أخي ${person.name}،\nنود تذكيركم بلطف بمبلغ مستحق قدره ${tr.amount.toLocaleString()} ${conf.symbol} (${conf.nameAr}) بخصوص: ${tr.description || 'مستحقات'}.\nتاريخ الاستحقاق: ${tr.dueDate} (متأخر منذ ${days} يوم).\nنظام DF المالي.`
+      `السلام عليكم ورحمة الله أخي ${person.name}،\nنود تذكيركم بلطف بمبلغ مستحق قدره ${tr.amount.toLocaleString()} ${conf.symbol} (${conf.nameAr}) بخصوص: ${tr.description || 'مستحقات'}.\nتاريخ الاستحقاق: ${tr.dueDate} (متأخر منذ ${days} يوم).\nنظام OsiFarma المالي.`
     );
 
     window.open(`https://wa.me/${cleanPhone}?text=${message}`, '_blank');

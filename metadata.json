@@ -1,6 +1,6 @@
 {
-  "name": "DF",
-  "description": "DF - Financial & Debt Management System (IQD, USD, TRY) with Cloud Sync & Auth",
+  "name": "OsiFarma",
+  "description": "OsiFarma - Financial & Debt Management System (IQD, USD, TRY) with Cloud Sync & Auth",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
